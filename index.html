@@ -1,80 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DOM</title>
-    <link rel="stylesheet" href="./styles/style.css">
-</head>
-<body>
-    <h1>DOM</h1>
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
 
+    <header>
+      <h1>DOM</h1>
+    </header>
 
-    <section id="city">
+    <main id="main">
+      <section id="city">
         <h2 id="city-title">Cities</h2>
-        <ul>
-            <li class="capital">Dhaka</li>
-            <li class="trade">Chttogram</li>
-            <li class="hills">Netrokona</li>
-            <li class="tea">Sylhet</li>
+        <ul id="city-list">
+          <li class="capital">Dhaka</li>
+          <li class="trade">Chttogram</li>
+          <li class="hills">Netrokona</li>
+          <li class="tea">Sylhet</li>
         </ul>
         <h3>Bangladesh</h3>
-        <p>Bangladesh is a <span>beautiful</span> country and it has many <span>rivers</span></p>
-    </section>
+        <p>
+          Bangladesh is a <span>beautiful</span> country and it has many
+          <span>rivers</span>
+        </p>
+      </section>
 
+      <section class="foods">
+        <h1 id="food-heading">Foods I love</h1>
+        <p>Yaaaaammi test</p>
+        <p>I need more</p>
+        <ul>
+          <li class="deshi">Rice</li>
+          <li class="deshi">Lentils</li>
+          <li class="deshi">Vegitables</li>
+          <li>Fish</li>
+          <li id="luchi">Luchi</li>
+          <li>Meat</li>
+        </ul>
+      </section>
 
-
-   <section class="foods">
-    <h1 id="food-heading">Foods I love</h1>
-    <p>Yaaaaammi test</p>
-    <p>I need more</p>
-    <ul>
-        <li class="deshi">Rice</li>
-        <li class="deshi">Lentils</li>
-        <li class="deshi">Vegitables</li>
-        <li>Fish</li>
-        <li id="luchi">Luchi</li>
-        <li>Meat</li>
-    </ul>
-   </section>
-
-
-   <section id="section3">
+      <section id="section3">
         <p>paragraph one</p>
         <p>paragraph two</p>
         <p>paragraph three</p>
-   </section>
+      </section>
+
+      <!-- get attribute and set attribute -->
+
+      <section id="container2">
+        <p id="para1" class="para text-3xl border-2 border-green-500">
+          this is paragraph one
+        </p>
+        <p class="para">this is paragraph one</p>
+        <p>this is paragraph one</p>
+        <p>this is paragraph one</p>
+      </section>
+
+      <button id="eventBtn" onclick="interAction()">Click Me!</button>
+
+      <section>
+        <a id="anchor" href="https://www.google.com">Google</a>
+        <button id="show-btn" onclick="showLink()">Show Link</button>
+        <p id="show-link"></p>
+      </section>
+
+      <section>
+        <img
+          id="image"
+          src="https://images.unsplash.com/photo-1755389521304-51d55cec52d6?"
+          width="800"
+          height="400"
+          alt=""
+        />
+        <br />
+        <button onclick="changeImage()">Change Image</button>
+      </section>
 
 
-    <!-- get attribute and set attribute -->
+    </main>
 
-        <section id="container2">
-            <p id="para1" class="para text-3xl border-2 border-green-500">this is paragraph one</p>
-            <p class="para">this is paragraph one</p>
-            <p>this is paragraph one</p>
-            <p>this is paragraph one</p>
-        </section>
-
-
-        <button id="eventBtn" onclick="interAction()">
-            Click Me!
-        </button>
-
-
-        <section>
-            <a id="anchor" href="https://www.google.com">Google</a>
-            <button id="show-btn">Show Link</button>
-            <p id="show-link"></p>
-        </section>
-
-
-
-
-
-
-
-
+    <footer>
+      <p>this is footer</p>
+    </footer>
 
     <script src="./app.js"></script>
-</body>
+  </body>
 </html>
