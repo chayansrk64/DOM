@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>paragraph one</p>
+    <p>paragraph two</p>
+    <p>paragraph three</p>
+
+    <!-- How to Access Items in the Collection -->
+
+    <section id="container">
+        <button id="btn1" name="first-name">First button</button>
+        <button id="btn2">Second button</button>
+        <button id="btn3">Third button</button>
+    </section>
+
+        <button class="btn" name="first-name">First button</button>
+        <button class="btn">Second button</button>
+        <button class="btn">Third button</button>
+
+
+
+    <script>
+        // returns html collection (live)
+        const paragraphs = document.getElementsByTagName('p')
+        // console.log('before update', paragraphs)
+        const newParagraph = document.createElement('p')
+        document.body.appendChild(newParagraph)
+        // console.log('after update', paragraphs)
+
+        // return nodeList (static)
+        const paragraphs2 = document.querySelectorAll('p');
+        // console.log('before update', paragraphs2)
+        const newParagraph2 = document.createElement('p')
+        document.body.appendChild(newParagraph2)
+        // console.log('after update', paragraphs2)
+
+
+
+        // example with html collection
+        const container = document.querySelector('#container')
+        // console.log(container)
+        const buttons = container.children; // returns html collection ========
+        // console.log(buttons[0]) // using the index
+        // console.log(buttons.namedItem("btn1")) // using the id attribute
+    //    console.log(buttons.namedItem("first-name")) // using the name attribute
+
+       {
+         const container = document.querySelector('#container');
+         const buttons = container.childNodes // returns a nodeList
+        //  console.log(buttons[1]) // using the index
+        //  console.log(buttons.namedItem("btn1")) // throws an error
+        //  console.log(buttons.namedItem("first-name")) // throws an error
+       }
+
+       {
+            //  const allButton = document.querySelectorAll('.btn') // nodeList have forEach
+             const allButton = document.getElementsByClassName('btn') // html collection cann't have forEach but for of loop;
+            //  for(let button of allButton){
+            //     console.log(button)
+            //  }
+            //  console.log(allButton)
+            //  allButton.forEach(btn => console.log(btn))
+       }
+
+
+    </script>
+
+</body>
+</html>
