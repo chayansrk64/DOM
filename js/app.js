@@ -89,6 +89,10 @@ function showLink() {
 const main = document.getElementById('main');
 // create a child node;
 const section = document.createElement('section')
+const title = document.createElement('h2')
+title.innerText = "Lists Items"
+section.appendChild(title)
+
 const ul = document.createElement('ul')
 
 const li1 = document.createElement('li');
@@ -109,3 +113,14 @@ main.appendChild(section)
 
 
 // easiest way to create and append element 
+const booksSection =  document.createElement('section');
+booksSection.innerHTML = `
+  <h2> My Favourite Books </h2>
+  <ul>
+    <li> Maths </li>
+    <li> English </li>
+    <li> physics </li>
+    <li> Geography </li>
+  </ul>
+`
+main.appendChild(booksSection)
