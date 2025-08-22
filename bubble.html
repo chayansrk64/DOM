@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bubble</title>
+    <style>
+        #body{
+            border: 2px solid peru;
+            padding: 20px;
+        }
+        #title{
+            border: 2px solid rgb(160, 121, 82);
+            padding: 20px;
+        }
+        #section{
+            border: 2px solid rgb(44, 131, 182);
+            padding: 20px;
+        }
+        #list-items{
+            border: 2px solid rgb(78, 34, 180);
+            padding: 20px;
+        }
+        #item-2{
+            border: 2px solid rgb(180, 34, 161);
+            padding: 20px;
+        }
+    </style>
+</head>
+<body id="body">
+    <h1 id="title">Bubble Testing...</h1>
+    <section id="section">
+        <ol id="list-items">
+            <li id="item-1">item-1</li>
+            <li id="item-2">item-2</li>
+            <li id="item-3">item-3</li>
+            <li id="item-4">item-4</li>
+            <li id="item-5">item-5</li>
+        </ol>
+    </section>
+
+
+    <script>
+        // body event
+        document.getElementById('body').addEventListener('click', function(event){
+            console.log('body clicked')
+        })
+        // title event
+        document.getElementById('title').addEventListener('click', function(event){
+            console.log('title clicked')
+            event.stopPropagation()
+        })
+        // section event
+        document.getElementById('section').addEventListener('click', function(event){
+            console.log('section clicked')
+            event.stopPropagation()
+        })
+        // ol event
+        document.getElementById('list-items').addEventListener('click', function(event){
+            console.log('list-items clicked')
+            event.stopPropagation()
+        })
+        // list item event
+        document.getElementById('item-2').addEventListener('click', function(event){
+            console.log('item-2 clicked')
+            // event.stopPropagation()
+            event.stopImmediatePropagation()
+        })
+        document.getElementById('item-2').addEventListener('click', function(event){
+            console.log('item-2 second clicked')
+            // event.stopImmediatePropagation()
+        })
+        document.getElementById('item-2').addEventListener('click', function(event){
+            console.log('item-2 third clicked')
+            // event.stopPropagation()
+        })
+
+    </script>
+
+</body>
+</html>
