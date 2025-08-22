@@ -6,7 +6,7 @@
     <title>Delete</title>
 </head>
 <body>
-    <h1>Delete with condition</h1>
+    <h1 id="title">Delete with condition</h1>
 
     <input type="text" name="" id="input-text" placeholder="write delete">
     <button id="delete-btn" disabled="true" >Delete</button>
@@ -17,6 +17,10 @@
             let inputValue = event.target.value;
             if(inputValue === 'delete'){
                 deleteBtn.removeAttribute('disabled')
+                document.getElementById('delete-btn').addEventListener('click', function(){
+                    let title = document.getElementById('title');
+                    title.style.display = 'none'
+                })
             }else{
                 deleteBtn.setAttribute('disabled', 'true')
             }
