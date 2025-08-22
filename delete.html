@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete</title>
+</head>
+<body>
+    <h1>Delete with condition</h1>
+
+    <input type="text" name="" id="input-text" placeholder="write delete">
+    <button id="delete-btn" disabled="true" >Delete</button>
+
+    <script>
+        document.getElementById('input-text').addEventListener('keyup', function(event){
+            let deleteBtn = document.getElementById('delete-btn');
+            let inputValue = event.target.value;
+            if(inputValue === 'delete'){
+                deleteBtn.removeAttribute('disabled')
+            }else{
+                deleteBtn.setAttribute('disabled', 'true')
+            }
+        })
+    </script>
+
+
+</body>
+</html>
